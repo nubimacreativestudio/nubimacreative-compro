@@ -1,0 +1,61 @@
+.waBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: var(--z-overlay);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: #25D366;
+  color: white;
+  padding: 0.875rem 1.25rem 0.875rem 1rem;
+  border-radius: 50px;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: all 0.3s ease;
+  overflow: visible;
+}
+
+.waBtn:hover {
+  box-shadow: 0 12px 40px rgba(37, 211, 102, 0.6);
+}
+
+.ping {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ff4444;
+  animation: ping 1.5s ease-in-out infinite;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.label {
+  white-space: nowrap;
+}
+
+@keyframes ping {
+  0% { transform: scale(1); opacity: 1; }
+  75%, 100% { transform: scale(2.5); opacity: 0; }
+}
+
+@media (max-width: 480px) {
+  .waBtn {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    padding: 0.875rem;
+    border-radius: 50%;
+  }
+  .label { display: none; }
+}

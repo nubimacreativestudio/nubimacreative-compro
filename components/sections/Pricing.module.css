@@ -1,0 +1,315 @@
+.pricing {
+  padding: 7rem 0;
+  background: var(--gray-50);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 50%, rgba(202, 240, 248, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 50%, rgba(144, 224, 239, 0.3) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.heading {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 4rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.375rem 1rem;
+  background: rgba(0, 119, 182, 0.08);
+  border: 1px solid rgba(0, 119, 182, 0.2);
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  color: var(--ocean);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2.75rem;
+  color: var(--navy);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.accent {
+  background: linear-gradient(135deg, var(--ocean), var(--sky));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: var(--gray-500);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1.5px solid var(--gray-100);
+  position: relative;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gray-200), var(--gray-300));
+  border-radius: 20px 20px 0 0;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+/* Popular card */
+.popular {
+  background: linear-gradient(135deg, var(--navy) 0%, #021466 100%);
+  border-color: transparent;
+  transform: translateY(-8px);
+  box-shadow: 0 30px 70px rgba(3, 4, 94, 0.25);
+}
+
+.popular::before {
+  background: linear-gradient(90deg, var(--sky), var(--ice));
+}
+
+.popular:hover {
+  transform: translateY(-14px);
+  box-shadow: 0 40px 80px rgba(3, 4, 94, 0.35);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -1px;
+  right: 1.5rem;
+  background: linear-gradient(135deg, var(--sky), var(--ice));
+  padding: 0.35rem 0.875rem;
+  border-radius: 0 0 10px 10px;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(0, 119, 182, 0.1);
+  color: var(--ocean);
+  flex-shrink: 0;
+}
+
+.iconPopular {
+  background: rgba(0, 180, 216, 0.2);
+  color: var(--sky);
+}
+
+.packageName {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.popular .packageName {
+  color: white;
+}
+
+.tagline {
+  font-size: 0.8125rem;
+  color: var(--gray-400);
+  margin-top: 0.25rem;
+}
+
+.popular .tagline {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.priceBlock {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.priceLabel {
+  font-size: 0.8125rem;
+  color: var(--gray-400);
+  margin-bottom: 0.125rem;
+}
+
+.popular .priceLabel { color: rgba(255, 255, 255, 0.5); }
+
+.priceValue {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--navy);
+  line-height: 1.1;
+}
+
+.popular .priceValue {
+  background: linear-gradient(135deg, var(--sky), var(--ice));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.pricePeriod {
+  font-size: 0.8125rem;
+  color: var(--gray-400);
+  margin-top: 0.125rem;
+}
+
+.popular .pricePeriod { color: rgba(255, 255, 255, 0.4); }
+
+.divider {
+  height: 1px;
+  background: var(--gray-100);
+  margin-bottom: 1.25rem;
+}
+
+.popular .divider { background: rgba(255, 255, 255, 0.1); }
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-bottom: 2rem;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: var(--gray-600);
+  line-height: 1.5;
+}
+
+.popular .feature { color: rgba(255, 255, 255, 0.75); }
+
+.check {
+  color: var(--sky);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.875rem;
+  border-radius: 12px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--gray-100);
+  color: var(--navy);
+  border: none;
+}
+
+.cta:hover {
+  background: var(--ocean);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 119, 182, 0.3);
+}
+
+.ctaPopular {
+  background: linear-gradient(135deg, var(--ocean), var(--sky));
+  color: white;
+  box-shadow: 0 6px 25px rgba(0, 119, 182, 0.4);
+}
+
+.ctaPopular:hover {
+  box-shadow: 0 10px 35px rgba(0, 119, 182, 0.6);
+}
+
+/* Note */
+.note {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 0.875rem;
+  color: var(--gray-400);
+}
+
+.noteLink {
+  color: var(--ocean);
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.noteLink:hover { color: var(--navy); }
+
+@media (max-width: 1024px) {
+  .grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+  .popular { transform: none; }
+  .popular:hover { transform: translateY(-4px); }
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 2.25rem; }
+}
