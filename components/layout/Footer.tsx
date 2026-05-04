@@ -4,9 +4,14 @@ import { AtSign, MessageCircle, Mail, ArrowUp } from "lucide-react";
 import styles from "./Footer.module.css";
 
 const services = [
-  "Landing Page", "UMKM Website", "Web Company Profile",
-  "Web Portfolio", "Social Media Design", "Branding Kit UMKM",
-  "Packaging Design", "UI/UX Design",
+  "Landing Page",
+  "UMKM Website",
+  "Web Company Profile",
+  "Web Portfolio",
+  "Social Media Design",
+  "Branding Kit UMKM",
+  "Packaging Design",
+  "UI/UX Design",
 ];
 
 const navLinks = [
@@ -21,8 +26,16 @@ const navLinks = [
 ];
 
 const socials = [
-  { icon: AtSign, label: "Instagram", href: "https://instagram.com/nubimacreative" },
-  { icon: MessageCircle, label: "WhatsApp", href: "https://wa.me/6281200000000" },
+  {
+    icon: AtSign,
+    label: "Instagram",
+    href: "https://instagram.com/nubimacreative",
+  },
+  {
+    icon: MessageCircle,
+    label: "WhatsApp",
+    href: "https://wa.me/6285136877650",
+  },
   { icon: Mail, label: "Email", href: "mailto:hello@nubima.id" },
 ];
 
@@ -39,11 +52,13 @@ export default function Footer() {
         <div className={styles.ctaContent}>
           <div>
             <h3 className={styles.ctaTitle}>Siap Mulai Proyek Anda?</h3>
-            <p className={styles.ctaSubtitle}>Konsultasi gratis, tanpa komitmen apapun. Hubungi kami sekarang.</p>
+            <p className={styles.ctaSubtitle}>
+              Konsultasi gratis, tanpa komitmen apapun. Hubungi kami sekarang.
+            </p>
           </div>
           <div className={styles.ctaActions}>
             <a
-              href="https://wa.me/6281200000000?text=Halo%20Nubima%20Creative%2C%20saya%20siap%20memulai%20proyek!"
+              href="https://wa.me/6285136877650?text=Halo%20Nubima%20Creative%2C%20saya%20siap%20memulai%20proyek!"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.ctaWhatsapp}
@@ -68,7 +83,12 @@ export default function Footer() {
             <div className={styles.brand}>
               <div className={styles.logo}>
                 <div className={styles.logoMark}>
-                  <img src="/logo.svg" alt="Nubima Creative" width={32} height={32} />
+                  <img
+                    src="/logo.svg"
+                    alt="Nubima Creative"
+                    width={32}
+                    height={32}
+                  />
                 </div>
                 <div className={styles.logoText}>
                   <span className={styles.logoName}>Nubima</span>
@@ -77,7 +97,8 @@ export default function Footer() {
               </div>
               <p className={styles.tagline}>Build Trust, Grow Fast</p>
               <p className={styles.desc}>
-                Creative studio yang membantu UMKM dan bisnis berkembang tampil lebih profesional, dipercaya, dan siap tumbuh.
+                Creative studio yang membantu UMKM dan bisnis berkembang tampil
+                lebih profesional, dipercaya, dan siap tumbuh.
               </p>
               <div className={styles.socials}>
                 {socials.map((s) => (
@@ -133,10 +154,34 @@ export default function Footer() {
             <div className={styles.col}>
               <h4 className={styles.colTitle}>Kontak</h4>
               <ul className={styles.colList}>
-                <li><a href="https://wa.me/6281200000000" target="_blank" rel="noopener noreferrer" className={styles.colLink}>+62 812-0000-0000</a></li>
-                <li><a href="mailto:hello@nubima.id" className={styles.colLink}>hello@nubima.id</a></li>
-                <li><a href="https://instagram.com/nubimacreative" target="_blank" rel="noopener noreferrer" className={styles.colLink}>@nubimacreative</a></li>
-                <li><span className={styles.colText}>Indonesia 🇮🇩</span></li>
+                <li>
+                  <a
+                    href="https://wa.me/6285136877650"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.colLink}
+                  >
+                    +62 812-0000-0000
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:hello@nubima.id" className={styles.colLink}>
+                    hello@nubima.id
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/nubimacreative"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.colLink}
+                  >
+                    @nubimacreative
+                  </a>
+                </li>
+                <li>
+                  <span className={styles.colText}>Indonesia 🇮🇩</span>
+                </li>
               </ul>
               <div className={styles.certBadge}>
                 <span>⭐</span>
@@ -151,9 +196,14 @@ export default function Footer() {
       <div className={styles.bottom}>
         <div className={styles.bottomContainer}>
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} Nubima Creative. All rights reserved. Made with ❤️ in Indonesia.
+            © {new Date().getFullYear()} Nubima Creative. All rights reserved.
+            Made with ❤️ in Indonesia.
           </p>
-          <button className={styles.scrollTop} onClick={scrollToTop} aria-label="Scroll to top">
+          <button
+            className={styles.scrollTop}
+            onClick={scrollToTop}
+            aria-label="Scroll to top"
+          >
             <ArrowUp size={16} />
           </button>
         </div>

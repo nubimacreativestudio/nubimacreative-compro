@@ -5,7 +5,7 @@ import styles from "./WhatsAppCTA.module.css";
 
 export default function WhatsAppCTA() {
   const waUrl =
-    "https://wa.me/6281200000000?text=Halo%20Nubima%20Creative%2C%20saya%20tertarik%20dengan%20layanan%20kalian.%20Boleh%20saya%20konsultasi%3F";
+    "https://wa.me/6285136877650?text=Halo%20Nubima%20Creative%2C%20saya%20tertarik%20dengan%20layanan%20kalian.%20Boleh%20saya%20konsultasi%3F";
 
   return (
     <motion.a

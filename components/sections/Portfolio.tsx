@@ -57,9 +57,10 @@ export default function Portfolio() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
-  const filtered = activeCategory === "All"
-    ? projects
-    : projects.filter((p) => p.category === activeCategory);
+  const filtered =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
 
   return (
     <section id="portfolio" className={styles.portfolio} ref={ref}>
@@ -76,7 +77,8 @@ export default function Portfolio() {
             <span className={styles.accent}> Bicara Sendiri</span>
           </h2>
           <p className={styles.subtitle}>
-            Lihat bagaimana kami membantu bisnis-bisnis Indonesia tampil lebih profesional, dipercaya, dan siap berkembang.
+            Lihat bagaimana kami membantu bisnis-bisnis Indonesia tampil lebih
+            profesional, dipercaya, dan siap berkembang.
           </p>
         </motion.div>
 
@@ -123,11 +125,16 @@ export default function Portfolio() {
                     <div className={styles.overlayContent}>
                       <div className={styles.tags}>
                         {project.tags.map((tag) => (
-                          <span key={tag} className={styles.tag}>{tag}</span>
+                          <span key={tag} className={styles.tag}>
+                            {tag}
+                          </span>
                         ))}
                       </div>
                       <h3 className={styles.cardTitle}>{project.title}</h3>
-                      <button className={styles.viewBtn} id={`portfolio-view-${project.id}`}>
+                      <button
+                        className={styles.viewBtn}
+                        id={`portfolio-view-${project.id}`}
+                      >
                         <ExternalLink size={16} />
                         View Project
                       </button>
@@ -135,7 +142,9 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <div className={styles.cardMeta}>
-                  <span className={styles.cardCategory}>{project.category}</span>
+                  <span className={styles.cardCategory}>
+                    {project.category}
+                  </span>
                   <p className={styles.cardName}>{project.title}</p>
                 </div>
               </motion.div>
@@ -153,7 +162,12 @@ export default function Portfolio() {
           <p>Tertarik melihat lebih banyak karya kami?</p>
           <button
             className={styles.ctaBtn}
-            onClick={() => window.open("https://wa.me/6281200000000?text=Halo%20Nubima%20Creative%2C%20saya%20ingin%20melihat%20lebih%20banyak%20portfolio%20kalian", "_blank")}
+            onClick={() =>
+              window.open(
+                "https://wa.me/6285136877650?text=Halo%20Nubima%20Creative%2C%20saya%20ingin%20melihat%20lebih%20banyak%20portfolio%20kalian",
+                "_blank",
+              )
+            }
           >
             Lihat Full Portfolio →
           </button>

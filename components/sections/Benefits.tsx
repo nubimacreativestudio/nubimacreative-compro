@@ -2,8 +2,14 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
-  CheckCircle2, TrendingUp, Globe, Users,
-  Shield, Zap, Palette, BarChart3
+  CheckCircle2,
+  TrendingUp,
+  Globe,
+  Users,
+  Shield,
+  Zap,
+  Palette,
+  BarChart3,
 } from "lucide-react";
 import styles from "./Benefits.module.css";
 
@@ -71,17 +77,25 @@ export default function Benefits() {
               <span className={styles.accent}> Dapatkan</span>
             </h2>
             <p className={styles.subtitle}>
-              Investasi pada desain profesional bukan biaya — ini adalah keputusan strategis yang berdampak langsung pada pertumbuhan bisnis Anda.
+              Investasi pada desain profesional bukan biaya — ini adalah
+              keputusan strategis yang berdampak langsung pada pertumbuhan
+              bisnis Anda.
             </p>
             <div className={styles.highlight}>
               <div className={styles.highlightIcon}>✦</div>
               <p className={styles.highlightText}>
-                &quot;Bisnis yang tampil profesional mendapatkan kepercayaan 3x lebih cepat dari pelanggan baru.&quot;
+                &quot;Bisnis yang tampil profesional mendapatkan kepercayaan 3x
+                lebih cepat dari pelanggan baru.&quot;
               </p>
             </div>
             <button
               className={styles.cta}
-              onClick={() => window.open("https://wa.me/6281200000000?text=Halo%20Nubima%20Creative%2C%20saya%20ingin%20berkonsultasi", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://wa.me/6285136877650?text=Halo%20Nubima%20Creative%2C%20saya%20ingin%20berkonsultasi",
+                  "_blank",
+                )
+              }
             >
               Mulai Konsultasi Gratis →
             </button>

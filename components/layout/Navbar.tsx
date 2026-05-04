@@ -44,9 +44,21 @@ export default function Navbar() {
       >
         <div className={styles.container}>
           {/* Logo */}
-          <a href="#hero" className={styles.logo} onClick={(e) => { e.preventDefault(); handleNavClick("#hero"); }}>
+          <a
+            href="#hero"
+            className={styles.logo}
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavClick("#hero");
+            }}
+          >
             <div className={styles.logoMark}>
-              <img src="/logo.svg" alt="Nubima Creative" width={32} height={32} />
+              <img
+                src="/logo.svg"
+                alt="Nubima Creative"
+                width={32}
+                height={32}
+              />
             </div>
             <div className={styles.logoText}>
               <span className={styles.logoName}>Nubima</span>
@@ -61,7 +73,10 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 className={styles.navLink}
-                onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(link.href);
+                }}
               >
                 {link.label}
               </a>
@@ -72,7 +87,12 @@ export default function Navbar() {
           <div className={styles.navActions}>
             <button
               className={styles.ctaBtn}
-              onClick={() => window.open("https://wa.me/6281200000000?text=Halo%20Nubima%20Creative%2C%20saya%20ingin%20berkonsultasi", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://wa.me/6285136877650?text=Halo%20Nubima%20Creative%2C%20saya%20ingin%20berkonsultasi",
+                  "_blank",
+                )
+              }
             >
               Let&apos;s Talk
             </button>
@@ -102,7 +122,10 @@ export default function Navbar() {
                 key={link.label}
                 href={link.href}
                 className={styles.mobileLink}
-                onClick={(e) => { e.preventDefault(); handleNavClick(link.href); }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(link.href);
+                }}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.05 }}
@@ -114,7 +137,10 @@ export default function Navbar() {
               className={styles.mobileCta}
               onClick={() => {
                 setMenuOpen(false);
-                window.open("https://wa.me/6281200000000?text=Halo%20Nubima%20Creative%2C%20saya%20ingin%20berkonsultasi", "_blank");
+                window.open(
+                  "https://wa.me/6285136877650?text=Halo%20Nubima%20Creative%2C%20saya%20ingin%20berkonsultasi",
+                  "_blank",
+                );
               }}
             >
               Let&apos;s Talk →

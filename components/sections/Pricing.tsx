@@ -92,7 +92,8 @@ export default function Pricing() {
             <span className={styles.accent}> Transparan</span>
           </h2>
           <p className={styles.subtitle}>
-            Investasi terjangkau untuk hasil yang profesional. Semua harga bisa disesuaikan dengan kebutuhan bisnis Anda.
+            Investasi terjangkau untuk hasil yang profesional. Semua harga bisa
+            disesuaikan dengan kebutuhan bisnis Anda.
           </p>
         </motion.div>
 
@@ -112,7 +113,9 @@ export default function Pricing() {
               )}
 
               <div className={styles.cardHeader}>
-                <div className={`${styles.iconWrap} ${pkg.popular ? styles.iconPopular : ""}`}>
+                <div
+                  className={`${styles.iconWrap} ${pkg.popular ? styles.iconPopular : ""}`}
+                >
                   <pkg.icon size={22} />
                 </div>
                 <div>
@@ -141,7 +144,12 @@ export default function Pricing() {
               <button
                 className={`${styles.cta} ${pkg.popular ? styles.ctaPopular : ""}`}
                 id={`pricing-${pkg.id}`}
-                onClick={() => window.open(`https://wa.me/6281200000000?text=Halo%20Nubima%20Creative%2C%20saya%20tertarik%20dengan%20paket%20${encodeURIComponent(pkg.name)}`, "_blank")}
+                onClick={() =>
+                  window.open(
+                    `https://wa.me/6285136877650?text=Halo%20Nubima%20Creative%2C%20saya%20tertarik%20dengan%20paket%20${encodeURIComponent(pkg.name)}`,
+                    "_blank",
+                  )
+                }
               >
                 {pkg.cta}
                 <ArrowRight size={16} />
@@ -156,10 +164,16 @@ export default function Pricing() {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.6 }}
         >
-          * Harga di atas adalah estimasi awal. Harga final disesuaikan dengan scope dan kompleksitas proyek.{" "}
+          * Harga di atas adalah estimasi awal. Harga final disesuaikan dengan
+          scope dan kompleksitas proyek.{" "}
           <button
             className={styles.noteLink}
-            onClick={() => window.open("https://wa.me/6281200000000?text=Halo%20Nubima%20Creative%2C%20saya%20mau%20tanya%20harga%20lebih%20detail", "_blank")}
+            onClick={() =>
+              window.open(
+                "https://wa.me/6285136877650?text=Halo%20Nubima%20Creative%2C%20saya%20mau%20tanya%20harga%20lebih%20detail",
+                "_blank",
+              )
+            }
           >
             Hubungi kami untuk penawaran khusus →
           </button>

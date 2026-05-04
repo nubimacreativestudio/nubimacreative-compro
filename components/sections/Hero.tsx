@@ -1,22 +1,19 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Play, Star, Award, Users, Briefcase } from "lucide-react";
+import { ArrowRight, Play} from "lucide-react";
 import styles from "./Hero.module.css";
-
-// const stats = [
-//   { icon: Award, value: "3+", label: "Tahun Pengalaman" },
-//   { icon: Briefcase, value: "150+", label: "Proyek Selesai" },
-//   { icon: Users, value: "50+", label: "Klien Puas" },
-//   { icon: Star, value: "100%", label: "Kepuasan Klien" },
-// ];
 
 const wordVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: 0.3 + i * 0.08, duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const },
+    transition: {
+      delay: 0.3 + i * 0.08,
+      duration: 0.6,
+      ease: [0.25, 0.46, 0.45, 0.94] as const,
+    },
   }),
 };
 
@@ -26,7 +23,8 @@ export default function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
-  const headline = "Helping UMKM Build Stronger Branding & Professional Websites".split(" ");
+  const headline =
+    "Helping UMKM Build Stronger Branding & Professional Websites".split(" ");
 
   const handleScroll = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
@@ -49,33 +47,30 @@ export default function Hero() {
             key={i}
             className={`${styles.shape} ${styles[`shape${i + 1}`]}`}
             animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
-            transition={{ duration: 4 + i, repeat: Infinity, ease: "easeInOut", delay: i * 0.5 }}
+            transition={{
+              duration: 4 + i,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: i * 0.5,
+            }}
           />
         ))}
       </div>
 
       <motion.div className={styles.content} style={{ opacity }}>
         <div className={styles.container}>
-          {/* Badge
-          <motion.div
-            className={styles.badge}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className={styles.badgeDot}></span>
-            Creative Studio for UMKM & Growing Businesses
-          </motion.div> */}
-
           {/* Headline */}
           <h1 className={styles.headline}>
             {headline.map((word, i) => (
               <motion.span
                 key={i}
-                className={`${styles.word} ${["Stronger", "Branding", "Professional", "Websites"].includes(word.replace(/[^a-zA-Z]/g, ""))
-                  ? styles.highlight
-                  : ""
-                  }`}
+                className={`${styles.word} ${
+                  ["Stronger", "Branding", "Professional", "Websites"].includes(
+                    word.replace(/[^a-zA-Z]/g, ""),
+                  )
+                    ? styles.highlight
+                    : ""
+                }`}
                 custom={i}
                 variants={wordVariants}
                 initial="hidden"
@@ -93,7 +88,9 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.6 }}
           >
-            Kami membantu bisnis membangun kesan pertama yang lebih kuat melalui branding yang strategis, desain modern, dan website profesional yang membangun kepercayaan serta mendorong pertumbuhan.
+            Kami membantu bisnis membangun kesan pertama yang lebih kuat melalui
+            branding yang strategis, desain modern, dan website profesional yang
+            membangun kepercayaan serta mendorong pertumbuhan.
           </motion.p>
 
           {/* CTAs */}
@@ -113,7 +110,12 @@ export default function Hero() {
             </button>
             <button
               className={styles.btnSecondary}
-              onClick={() => window.open("https://wa.me/6281200000000?text=Halo%20Nubima%20Creative%2C%20saya%20ingin%20berkonsultasi", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://wa.me/6285136877650?text=Halo%20Nubima%20Creative%2C%20saya%20ingin%20berkonsultasi",
+                  "_blank",
+                )
+              }
               id="hero-lets-work"
             >
               <span className={styles.playIcon}>
@@ -133,33 +135,6 @@ export default function Hero() {
             <span className={styles.taglineText}>Solusi Kreatif Bisnismu</span>
           </motion.div>
         </div>
-
-        {/* Stats bar */}
-        <motion.div
-          className={styles.statsBar}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2, duration: 0.6 }}
-        >
-          {/* <div className={styles.statsContainer}>
-            {stats.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                className={styles.statItem}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2.1 + i * 0.1 }}
-              >
-                <stat.icon size={20} className={styles.statIcon} />
-                <div className={styles.statInfo}>
-                  <span className={styles.statValue}>{stat.value}</span>
-                  <span className={styles.statLabel}>{stat.label}</span>
-                </div>
-                {i < stats.length - 1 && <div className={styles.statDivider}></div>}
-              </motion.div>
-            ))}
-          </div> */}
-        </motion.div>
       </motion.div>
 
       {/* Scroll indicator */}

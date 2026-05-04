@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -33,7 +35,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Nubima Creative — Build Trust, Grow Fast",
-    description: "Creative studio untuk UMKM dan bisnis yang ingin tampil profesional.",
+    description:
+      "Creative studio untuk UMKM dan bisnis yang ingin tampil profesional.",
   },
 };
 
@@ -45,6 +48,8 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${plusJakartaSans.variable} ${inter.variable}`}>
       <body>{children}</body>
+      <Analytics />
+      <SpeedInsights />
     </html>
   );
 }

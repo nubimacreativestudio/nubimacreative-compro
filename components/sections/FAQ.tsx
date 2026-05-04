@@ -39,10 +39,24 @@ const faqs = [
   },
 ];
 
-function FAQItem({ q, a, isOpen, onClick }: { q: string; a: string; isOpen: boolean; onClick: () => void }) {
+function FAQItem({
+  q,
+  a,
+  isOpen,
+  onClick,
+}: {
+  q: string;
+  a: string;
+  isOpen: boolean;
+  onClick: () => void;
+}) {
   return (
     <div className={`${styles.item} ${isOpen ? styles.open : ""}`}>
-      <button className={styles.question} onClick={onClick} aria-expanded={isOpen}>
+      <button
+        className={styles.question}
+        onClick={onClick}
+        aria-expanded={isOpen}
+      >
         <span>{q}</span>
         <span className={styles.icon}>
           {isOpen ? <Minus size={18} /> : <Plus size={18} />}
@@ -87,11 +101,17 @@ export default function FAQ() {
               <span className={styles.accent}> Sering Ditanyakan</span>
             </h2>
             <p className={styles.subtitle}>
-              Tidak menemukan jawaban yang Anda cari? Hubungi kami langsung via WhatsApp.
+              Tidak menemukan jawaban yang Anda cari? Hubungi kami langsung via
+              WhatsApp.
             </p>
             <button
               className={styles.waBtn}
-              onClick={() => window.open("https://wa.me/6281200000000?text=Halo%20Nubima%20Creative%2C%20saya%20punya%20pertanyaan%20tentang%20layanan%20kalian", "_blank")}
+              onClick={() =>
+                window.open(
+                  "https://wa.me/6285136877650?text=Halo%20Nubima%20Creative%2C%20saya%20punya%20pertanyaan%20tentang%20layanan%20kalian",
+                  "_blank",
+                )
+              }
             >
               Tanya via WhatsApp →
             </button>
