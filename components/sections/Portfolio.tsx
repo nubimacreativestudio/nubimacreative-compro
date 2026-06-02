@@ -5,47 +5,47 @@ import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import styles from "./Portfolio.module.css";
 
-const categories = ["All", "Branding", "Website", "Social Media", "Design"];
+const categories = ["Semua", "Branding", "Website", "Social Media", "Design"];
 
 const projects = [
   {
     id: 1,
-    title: "Kopi Nusantara — Branding Kit",
+    title: "Kopi Nusantara: Branding Kit",
     category: "Branding",
     image: "/images/portfolio-branding.png",
     tags: ["Logo", "Brand Identity", "Business Card"],
   },
   {
     id: 2,
-    title: "Aura Beauty — E-commerce Website",
+    title: "Aura Beauty: E-commerce Website",
     category: "Website",
     image: "/images/portfolio-website.png",
     tags: ["Web Design", "UMKM", "Beauty"],
   },
   {
     id: 3,
-    title: "Sharp Cuts — Social Media Kit",
+    title: "Sharp Cuts: Social Media Kit",
     category: "Social Media",
     image: "/images/portfolio-socmed.png",
     tags: ["Instagram", "Stories", "Feed Grid"],
   },
   {
     id: 4,
-    title: "NARA Wear — Packaging Design",
+    title: "NARA Wear: Packaging Design",
     category: "Design",
     image: "/images/portfolio-packaging.png",
     tags: ["Packaging", "Fashion", "Print"],
   },
   {
     id: 5,
-    title: "Dapur Nusantara — Landing Page",
+    title: "Dapur Nusantara: Landing Page",
     category: "Website",
     image: "/images/portfolio-landingpage.png",
     tags: ["Landing Page", "Culinary", "Mobile First"],
   },
   {
     id: 6,
-    title: "BrewMate — UI/UX Mobile App",
+    title: "BrewMate: UI/UX Mobile App",
     category: "Design",
     image: "/images/portfolio-uiux.png",
     tags: ["UI/UX", "Mobile App", "Prototype"],
@@ -53,12 +53,12 @@ const projects = [
 ];
 
 export default function Portfolio() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("Semua");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   const filtered =
-    activeCategory === "All"
+    activeCategory === "Semua"
       ? projects
       : projects.filter((p) => p.category === activeCategory);
 
@@ -71,7 +71,7 @@ export default function Portfolio() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className={styles.badge}>Our Work</span>
+          <span className={styles.badge}>Karya Kami</span>
           <h2 className={styles.title}>
             Portfolio yang
             <span className={styles.accent}> Bicara Sendiri</span>
@@ -136,7 +136,7 @@ export default function Portfolio() {
                         id={`portfolio-view-${project.id}`}
                       >
                         <ExternalLink size={16} />
-                        View Project
+                        Lihat Proyek
                       </button>
                     </div>
                   </div>

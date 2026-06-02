@@ -42,7 +42,7 @@ const benefits = [
   {
     icon: Zap,
     title: "Konversi Lebih Tinggi",
-    desc: "Desain strategis mendorong calon pelanggan untuk mengambil tindakan — menghubungi, membeli, atau mendaftar.",
+    desc: "Desain strategis mendorong calon pelanggan untuk mengambil tindakan: menghubungi, membeli, atau mendaftar.",
   },
   {
     icon: Palette,
@@ -71,13 +71,13 @@ export default function Benefits() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7 }}
           >
-            <span className={styles.badge}>Client Benefits</span>
+            <span className={styles.badge}>Keuntungan Klien</span>
             <h2 className={styles.title}>
               Apa yang Bisnis Anda
               <span className={styles.accent}> Dapatkan</span>
             </h2>
             <p className={styles.subtitle}>
-              Investasi pada desain profesional bukan biaya — ini adalah
+              Investasi pada desain profesional bukan biaya, ini adalah
               keputusan strategis yang berdampak langsung pada pertumbuhan
               bisnis Anda.
             </p>

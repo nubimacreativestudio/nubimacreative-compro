@@ -35,7 +35,7 @@ const reasons = [
   {
     icon: TrendingUp,
     title: "Fokus pada Pertumbuhan",
-    desc: "Kami bukan hanya desainer — kami adalah mitra strategis yang peduli pertumbuhan bisnis Anda.",
+    desc: "Kami bukan hanya desainer, kami adalah mitra strategis yang peduli pertumbuhan bisnis Anda.",
     color: "ocean",
   },
   {
@@ -53,7 +53,7 @@ const reasons = [
   {
     icon: Headphones,
     title: "Support Pasca Proyek",
-    desc: "Layanan kami tidak berhenti setelah proyek selesai — kami tetap ada untuk mendukung Anda.",
+    desc: "Layanan kami tidak berhenti setelah proyek selesai, kami tetap ada untuk mendukung Anda.",
     color: "sky",
   },
 ];
@@ -72,13 +72,13 @@ export default function WhyUs() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className={styles.badge}>Why Nubima Creative?</span>
+          <span className={styles.badge}>Mengapa Nubima Creative?</span>
           <h2 className={styles.title}>
-            Why Businesses Choose
-            <span className={styles.accent}> Us</span>
+            Mengapa Bisnis Memilih
+            <span className={styles.accent}> Kami</span>
           </h2>
           <p className={styles.subtitle}>
-            We combine creativity with strategy to deliver designs that don&apos;t just look good — they work hard for your business.
+            Kami memadukan kreativitas dengan strategi untuk menghasilkan desain yang tidak sekadar indah, tetapi bekerja keras mendorong pertumbuhan bisnis Anda.
           </p>
         </motion.div>
 

@@ -5,10 +5,10 @@ import { Target, Heart, Zap, Trophy } from "lucide-react";
 import styles from "./About.module.css";
 
 const values = [
-  { icon: Target, title: "Strategic", desc: "Every design decision is purpose-driven, aligned with your business goals." },
-  { icon: Heart, title: "Passionate", desc: "We pour creativity and dedication into every project we take on." },
-  { icon: Zap, title: "Efficient", desc: "Fast turnaround without compromising on quality or attention to detail." },
-  { icon: Trophy, title: "Results-Driven", desc: "We measure success by the real impact our work has on your business." },
+  { icon: Target, title: "Strategis", desc: "Setiap keputusan desain kami berbasis tujuan dan selaras dengan target bisnis Anda." },
+  { icon: Heart, title: "Penuh Dedikasi", desc: "Kami mencurahkan kreativitas dan komitmen terbaik di setiap proyek yang kami kerjakan." },
+  { icon: Zap, title: "Efisien", desc: "Pengerjaan cepat tanpa mengorbankan kualitas dan perhatian terhadap detail." },
+  { icon: Trophy, title: "Berorientasi Hasil", desc: "Keberhasilan kami diukur dari dampak nyata yang dirasakan bisnis Anda." },
 ];
 
 export default function About() {
@@ -33,18 +33,18 @@ export default function About() {
                 </div>
                 <div className={styles.logoLabel}>
                   <strong>Nubima Creative</strong>
-                  <span>One-Stop Creative Studio</span>
+                  <span>Studio Kreatif Serba Bisa</span>
                 </div>
               </div>
-              <div className={styles.taglineBig}>Build Trust,<br />Grow Fast</div>
+              <div className={styles.taglineBig}>Solusi Kreatif<br />Bisnismu</div>
               <div className={styles.decorLine}></div>
               <p className={styles.visualDesc}>
-                A creative studio dedicated to elevating UMKM and growing businesses through premium branding and design.
+                Studio kreatif yang berdedikasi mengangkat UMKM dan bisnis berkembang melalui branding premium dan desain berkualitas tinggi.
               </p>
             </div>
             <div className={styles.floatingBadge}>
               <span className={styles.fbIcon}>✦</span>
-              <span>Premium Quality</span>
+              <span>Kualitas Premium</span>
             </div>
             <div className={styles.floatingBadge2}>
               <span>Est. 2021</span>
@@ -58,13 +58,13 @@ export default function About() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
           >
-            <div className={styles.badge}>About Nubima Creative</div>
+            <div className={styles.badge}>Tentang Nubima Creative</div>
             <h2 className={styles.heading}>
-              A Creative Studio Built for
-              <span className={styles.accent}> Business Growth</span>
+              Studio Kreatif yang Dibangun untuk
+              <span className={styles.accent}> Pertumbuhan Bisnis</span>
             </h2>
             <p className={styles.lead}>
-              Nubima Creative lahir dari keyakinan bahwa setiap bisnis — sekecil apapun — berhak tampil profesional dan dipercaya.
+              Nubima Creative lahir dari keyakinan bahwa setiap bisnis, sekecil apapun, berhak tampil profesional dan dipercaya.
             </p>
             <p className={styles.body}>
               Kami adalah creative studio yang fokus membantu UMKM, bisnis lokal, dan brand berkembang untuk memiliki identitas visual yang kuat, website profesional, dan strategi desain yang menghasilkan kepercayaan serta pertumbuhan nyata.

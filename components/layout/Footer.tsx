@@ -15,28 +15,28 @@ const services = [
 ];
 
 const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
+  { label: "Beranda", href: "#hero" },
+  { label: "Tentang Kami", href: "#about" },
+  { label: "Layanan", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Testimoni", href: "#testimonials" },
+  { label: "Harga", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Kontak", href: "#contact" },
 ];
 
 const socials = [
   {
     icon: AtSign,
     label: "Instagram",
-    href: "https://instagram.com/nubimacreative",
+    href: "https://instagram.com/nubimacreativestudio",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
     href: "https://wa.me/6285136877650",
   },
-  { icon: Mail, label: "Email", href: "mailto:hello@nubima.id" },
+  { icon: Mail, label: "Email", href: "mailto:nubimacreativestudio@gmail.com" },
 ];
 
 export default function Footer() {
@@ -161,30 +161,29 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className={styles.colLink}
                   >
-                    +62 812-0000-0000
+                    +62 851-3687-7650
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:hello@nubima.id" className={styles.colLink}>
-                    hello@nubima.id
+                  <a href="mailto:nubimacreativestudio@gmail.com" className={styles.colLink}>
+                    nubimacreativestudio@gmail.com
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://instagram.com/nubimacreative"
+                    href="https://instagram.com/nubimacreativestudio"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.colLink}
                   >
-                    @nubimacreative
+                    @nubimacreativestudio
                   </a>
                 </li>
                 <li>
-                  <span className={styles.colText}>Indonesia 🇮🇩</span>
+                  <span className={styles.colText}>Indonesia </span>
                 </li>
               </ul>
               <div className={styles.certBadge}>
-                <span>⭐</span>
                 <span>100% Kepuasan Klien</span>
               </div>
             </div>
@@ -197,7 +196,6 @@ export default function Footer() {
         <div className={styles.bottomContainer}>
           <p className={styles.copyright}>
             © {new Date().getFullYear()} Nubima Creative. All rights reserved.
-            Made with ❤️ in Indonesia.
           </p>
           <button
             className={styles.scrollTop}

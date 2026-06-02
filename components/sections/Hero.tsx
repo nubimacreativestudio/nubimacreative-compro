@@ -24,7 +24,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   const headline =
-    "Helping UMKM Build Stronger Branding & Professional Websites".split(" ");
+    "Bantu UMKM Tampil Profesional dengan Branding Kuat & Website Berkelas".split(" ");
 
   const handleScroll = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
@@ -65,8 +65,8 @@ export default function Hero() {
               <motion.span
                 key={i}
                 className={`${styles.word} ${
-                  ["Stronger", "Branding", "Professional", "Websites"].includes(
-                    word.replace(/[^a-zA-Z]/g, ""),
+                  ["Profesional", "Branding", "Kuat", "Berkelas"].includes(
+                    word.replace(/[^a-zA-ZA-Za-z]/g, ""),
                   )
                     ? styles.highlight
                     : ""
@@ -105,7 +105,7 @@ export default function Hero() {
               onClick={() => handleScroll("#portfolio")}
               id="hero-view-portfolio"
             >
-              View Portfolio
+              Lihat Portfolio
               <ArrowRight size={18} />
             </button>
             <button
@@ -121,7 +121,7 @@ export default function Hero() {
               <span className={styles.playIcon}>
                 <Play size={14} fill="currentColor" />
               </span>
-              Let&apos;s Work Together
+              Mulai Kerja Sama
             </button>
           </motion.div>
 

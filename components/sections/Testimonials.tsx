@@ -101,7 +101,7 @@ export default function Testimonials() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className={styles.badge}>Testimonials</span>
+          <span className={styles.badge}>Testimoni</span>
           <h2 className={styles.title}>
             Apa Kata
             <span className={styles.accent}> Klien Kami</span>

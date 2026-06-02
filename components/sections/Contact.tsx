@@ -120,7 +120,7 @@ export default function Contact() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className={styles.badge}>Get In Touch</span>
+          <span className={styles.badge}>Hubungi Kami</span>
           <h2 className={styles.title}>
             Siap Membangun
             <span className={styles.accent}> Brand Anda?</span>

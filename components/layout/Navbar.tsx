@@ -5,12 +5,12 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
+  { label: "Beranda", href: "#hero" },
+  { label: "Tentang Kami", href: "#about" },
+  { label: "Layanan", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Contact", href: "#contact" },
+  { label: "Harga", href: "#pricing" },
+  { label: "Kontak", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -94,7 +94,7 @@ export default function Navbar() {
                 )
               }
             >
-              Let&apos;s Talk
+              Konsultasi Gratis
             </button>
             <button
               className={styles.menuBtn}
@@ -143,7 +143,7 @@ export default function Navbar() {
                 );
               }}
             >
-              Let&apos;s Talk →
+              Konsultasi Gratis →
             </button>
           </motion.div>
         )}

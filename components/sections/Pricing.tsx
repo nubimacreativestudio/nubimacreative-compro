@@ -306,7 +306,7 @@ export default function Pricing() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className={styles.badge}>Pricing</span>
+          <span className={styles.badge}>Harga</span>
           <h2 className={styles.title}>
             Paket Harga yang
             <span className={styles.accentText}> Transparan</span>
@@ -380,7 +380,7 @@ export default function Pricing() {
                   >
                     {pkg.popular && (
                       <div className={styles.popularBadge}>
-                        <span>⭐ Most Popular</span>
+                        <span>⭐ Paling Populer</span>
                       </div>
                     )}
 
@@ -471,7 +471,7 @@ export default function Pricing() {
           <div className={styles.bundleHeading}>
             <span className={styles.bundgeBadge}>
               <Package size={14} />
-              Bundle Packages
+              Paket Bundling
             </span>
             <h3 className={styles.bundleTitle}>
               Hemat Lebih dengan Paket Bundling
@@ -534,7 +534,7 @@ export default function Pricing() {
               </h3>
               <p className={styles.customCtaDesc}>
                 Setiap bisnis punya kebutuhan unik. Ceritakan kebutuhan Anda dan
-                kami akan buatkan penawaran yang tepat — gratis konsultasi!
+                kami akan buatkan penawaran yang tepat, gratis konsultasi!
               </p>
             </div>
             <button

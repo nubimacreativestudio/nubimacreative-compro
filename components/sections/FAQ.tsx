@@ -11,11 +11,11 @@ const faqs = [
   },
   {
     q: "Berapa kali saya bisa melakukan revisi?",
-    a: "Jumlah revisi tergantung paket yang dipilih — Starter: 1x revisi, Growth: 3x revisi, Premium: unlimited. Kami juga menawarkan tambahan revisi di luar paket dengan biaya yang sangat terjangkau.",
+    a: "Jumlah revisi tergantung paket yang dipilih: Starter: 1x revisi, Growth: 3x revisi, Premium: unlimited. Kami juga menawarkan tambahan revisi di luar paket dengan biaya yang sangat terjangkau.",
   },
   {
     q: "Apakah saya perlu menyiapkan materi sebelum mulai proyek?",
-    a: "Di awal proyek, kami akan mengirimkan brief form yang memandu Anda mengumpulkan informasi yang dibutuhkan — seperti deskripsi bisnis, target audiens, referensi visual, dan konten teks. Tim kami siap membantu jika Anda membutuhkan panduan.",
+    a: "Di awal proyek, kami akan mengirimkan brief form yang memandu Anda mengumpulkan informasi yang dibutuhkan, seperti deskripsi bisnis, target audiens, referensi visual, dan konten teks. Tim kami siap membantu jika Anda membutuhkan panduan.",
   },
   {
     q: "Format file apa saja yang akan saya terima?",

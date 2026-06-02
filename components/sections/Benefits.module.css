@@ -156,8 +156,6 @@
   color: white;
 }
 
-.itemContent {}
-
 .itemTitle {
   font-family: var(--font-heading);
   font-weight: 700;

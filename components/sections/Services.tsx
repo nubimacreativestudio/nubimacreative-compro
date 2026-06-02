@@ -103,13 +103,13 @@ export default function Services() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className={styles.badge}>Our Services</span>
+          <span className={styles.badge}>Layanan Kami</span>
           <h2 className={styles.title}>
-            One Studio,<span className={styles.accent}> All Solutions</span>
+            Satu Studio,<span className={styles.accent}> Semua Solusi</span>
           </h2>
           <p className={styles.subtitle}>
             Dari branding hingga website, kami menghadirkan solusi kreatif
-            lengkap yang Anda butuhkan untuk berkembang.
+            lengkap yang Anda butuhkan untuk berkembang lebih pesat.
           </p>
         </motion.div>
 
@@ -151,7 +151,7 @@ export default function Services() {
                       )
                     }
                   >
-                    Order Now →
+                    Pesan Sekarang →
                   </button>
                 </div>
               </div>
