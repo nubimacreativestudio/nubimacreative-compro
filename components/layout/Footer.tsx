@@ -95,7 +95,7 @@ export default function Footer() {
                   <span className={styles.logoSub}>Creative</span>
                 </div>
               </div>
-              <p className={styles.tagline}>Build Trust, Grow Fast</p>
+              <p className={styles.tagline}>Solusi Kreatif Bisnismu</p>
               <p className={styles.desc}>
                 Creative studio yang membantu UMKM dan bisnis berkembang tampil
                 lebih profesional, dipercaya, dan siap tumbuh.
@@ -183,9 +183,6 @@ export default function Footer() {
                   <span className={styles.colText}>Indonesia </span>
                 </li>
               </ul>
-              <div className={styles.certBadge}>
-                <span>100% Kepuasan Klien</span>
-              </div>
             </div>
           </div>
         </div>

@@ -11,31 +11,31 @@ const faqs = [
   },
   {
     q: "Berapa kali saya bisa melakukan revisi?",
-    a: "Jumlah revisi tergantung paket yang dipilih: Starter: 1x revisi, Growth: 3x revisi, Premium: unlimited. Kami juga menawarkan tambahan revisi di luar paket dengan biaya yang sangat terjangkau.",
+    a: "Jumlah revisi yang akan diberikan yaitu maksimal 5x. Kami juga menawarkan tambahan revisi di luar paket dengan biaya yang sangat terjangkau.",
   },
   {
     q: "Apakah saya perlu menyiapkan materi sebelum mulai proyek?",
     a: "Di awal proyek, kami akan mengirimkan brief form yang memandu Anda mengumpulkan informasi yang dibutuhkan, seperti deskripsi bisnis, target audiens, referensi visual, dan konten teks. Tim kami siap membantu jika Anda membutuhkan panduan.",
   },
-  {
-    q: "Format file apa saja yang akan saya terima?",
-    a: "Kami menyerahkan semua format yang dibutuhkan: AI/EPS (vector) untuk print, PNG dengan background transparan, JPG untuk digital, PDF untuk dokumen, dan format lain yang relevan dengan jenis proyeknya.",
-  },
+  // {
+  //   q: "Format file apa saja yang akan saya terima?",
+  //   a: "Kami menyerahkan semua format yang dibutuhkan: AI/EPS (vector) untuk print, PNG dengan background transparan, JPG untuk digital, PDF untuk dokumen, dan format lain yang relevan dengan jenis proyeknya.",
+  // },
   {
     q: "Apakah Nubima Creative melayani klien di luar kota?",
     a: "Ya, kami melayani klien di seluruh Indonesia dan bahkan dari luar negeri. Semua proses komunikasi, revisi, dan pengiriman file dilakukan secara online melalui WhatsApp, email, dan Google Drive.",
   },
   {
     q: "Bagaimana sistem pembayarannya?",
-    a: "Kami menggunakan sistem 50% di awal sebagai tanda jadi, dan 50% setelah proyek selesai dan disetujui. Transfer via bank BCA, Mandiri, atau BNI. Pembayaran bisa juga melalui GoPay/OVO.",
+    a: "Kami menggunakan sistem 40% di awal sebagai tanda jadi, dan 60% setelah proyek selesai dan disetujui. Transfer via bank BCA, E-wallet ataupun QRIS.",
   },
   {
     q: "Apakah harga bisa dinegosiasi untuk UMKM dengan budget terbatas?",
-    a: "Kami memahami keterbatasan budget UMKM. Hubungi kami untuk konsultasi gratis dan kami akan membantu menyusun solusi yang sesuai dengan budget dan kebutuhan bisnis Anda.",
+    a: "Tentu saja, kami siap membantu UMKM dengan budget terbatas. Hubungi kami untuk konsultasi gratis dan kami akan membantu menyusun solusi yang sesuai dengan budget dan kebutuhan bisnis Anda.",
   },
   {
     q: "Apakah saya mendapatkan hak kepemilikan penuh atas desain yang dibuat?",
-    a: "Ya, setelah proyek selesai dan pembayaran lunas, Anda mendapatkan hak kepemilikan penuh atas seluruh desain yang telah dibuat, termasuk file source-nya.",
+    a: "Tentu saja, setelah proyek selesai dan pembayaran lunas, Anda mendapatkan hak kepemilikan penuh atas seluruh desain yang telah dibuat, termasuk file source-nya.",
   },
 ];
 

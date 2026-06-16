@@ -138,7 +138,6 @@ export default function Services() {
                   <p className={styles.cardDesc}>{service.desc}</p>
                 </div>
                 <div className={styles.cardHover}>
-                  <service.icon size={32} className={styles.hoverIcon} />
                   <h3 className={styles.hoverTitle}>{service.title}</h3>
                   <p className={styles.hoverDesc}>{service.desc}</p>
                   <button

@@ -175,7 +175,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className={styles.waDirectBtn}
                 >
-                  💬 Chat WhatsApp Sekarang
+                  Chat WhatsApp Sekarang
                 </a>
               </div>
             </div>

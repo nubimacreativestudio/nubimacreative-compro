@@ -70,7 +70,7 @@ export default function About() {
               Kami adalah creative studio yang fokus membantu UMKM, bisnis lokal, dan brand berkembang untuk memiliki identitas visual yang kuat, website profesional, dan strategi desain yang menghasilkan kepercayaan serta pertumbuhan nyata.
             </p>
             <p className={styles.body}>
-              Dengan pengalaman lebih dari 3 tahun dan 150+ proyek yang telah diselesaikan, kami memahami apa yang dibutuhkan bisnis Anda untuk tampil lebih profesional di mata pelanggan.
+              Dengan pengalaman lebih dari 3 tahun dan 50+ proyek yang telah diselesaikan, kami memahami apa yang dibutuhkan bisnis Anda untuk tampil lebih profesional di mata pelanggan.
             </p>
 
             {/* Values grid */}
