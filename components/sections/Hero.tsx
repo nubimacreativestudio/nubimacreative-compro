@@ -1,30 +1,17 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, Play} from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import styles from "./Hero.module.css";
-
-const wordVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: 0.3 + i * 0.08,
-      duration: 0.6,
-      ease: [0.25, 0.46, 0.45, 0.94] as const,
-    },
-  }),
-};
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: containerRef });
-  const y = useTransform(scrollYProgress, [0, 1], [0, 200]);
-  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
-  const headline =
-    "Bantu UMKM Tampil Profesional dengan Branding Kuat & Website Berkelas".split(" ");
+  // Only run parallax on desktop — useScroll is cheap but transforms trigger
+  // paint on mobile so we keep the hook but don't apply y on mobile (CSS handles it)
+  const { scrollYProgress } = useScroll({ target: containerRef });
+  const y = useTransform(scrollYProgress, [0, 1], [0, 150]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const handleScroll = (id: string) => {
     document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
@@ -32,61 +19,42 @@ export default function Hero() {
 
   return (
     <section id="hero" className={styles.hero} ref={containerRef}>
-      {/* Animated background elements */}
-      <motion.div className={styles.bgElements} style={{ y }}>
-        <div className={`${styles.orb} ${styles.orb1}`}></div>
-        <div className={`${styles.orb} ${styles.orb2}`}></div>
-        <div className={`${styles.orb} ${styles.orb3}`}></div>
-        <div className={styles.grid}></div>
-      </motion.div>
+      {/* Background orbs — CSS animated, no JS */}
+      <div className={styles.bgElements}>
+        <div className={`${styles.orb} ${styles.orb1}`} />
+        <div className={`${styles.orb} ${styles.orb2}`} />
+        <div className={`${styles.orb} ${styles.orb3}`} />
+        <div className={styles.grid} />
+      </div>
 
-      {/* Floating shapes */}
-      <div className={styles.shapes}>
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className={`${styles.shape} ${styles[`shape${i + 1}`]}`}
-            animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
-            transition={{
-              duration: 4 + i,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: i * 0.5,
-            }}
-          />
+      {/* Floating shapes — CSS only on desktop, hidden on mobile */}
+      <div className={styles.shapes} aria-hidden="true">
+        {[1, 2, 3, 4, 5, 6].map((n) => (
+          <div key={n} className={`${styles.shape} ${styles[`shape${n}`]}`} />
         ))}
       </div>
 
       <motion.div className={styles.content} style={{ opacity }}>
         <div className={styles.container}>
-          {/* Headline */}
-          <h1 className={styles.headline}>
-            {headline.map((word, i) => (
-              <motion.span
-                key={i}
-                className={`${styles.word} ${
-                  ["Profesional", "Branding", "Kuat", "Berkelas"].includes(
-                    word.replace(/[^a-zA-ZA-Za-z]/g, ""),
-                  )
-                    ? styles.highlight
-                    : ""
-                }`}
-                custom={i}
-                variants={wordVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                {word}{" "}
-              </motion.span>
-            ))}
-          </h1>
+          {/* Headline — single block animation, not per-word */}
+          <motion.h1
+            className={styles.headline}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] }}
+          >
+            Bantu UMKM Tampil{" "}
+            <span className={styles.highlight}>Profesional</span> dengan{" "}
+            <span className={styles.highlight}>Branding Kuat</span> &amp;{" "}
+            Website <span className={styles.highlight}>Berkelas</span>
+          </motion.h1>
 
           {/* Subheadline */}
           <motion.p
             className={styles.subheadline}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
           >
             Kami membantu bisnis membangun kesan pertama yang lebih kuat melalui
             branding yang strategis, desain modern, dan website profesional yang
@@ -98,7 +66,7 @@ export default function Hero() {
             className={styles.ctas}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.5, duration: 0.6 }}
+            transition={{ delay: 0.75, duration: 0.6 }}
           >
             <button
               className={styles.btnPrimary}
@@ -130,7 +98,7 @@ export default function Hero() {
             className={styles.tagline}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.8, duration: 0.6 }}
+            transition={{ delay: 1, duration: 0.6 }}
           >
             <span className={styles.taglineText}>Solusi Kreatif Bisnismu</span>
           </motion.div>
@@ -142,7 +110,7 @@ export default function Hero() {
         className={styles.scrollIndicator}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2.5 }}
+        transition={{ delay: 1.5 }}
       >
         <motion.div
           className={styles.scrollDot}

@@ -118,6 +118,7 @@ export default function Portfolio() {
                     src={project.image}
                     alt={project.title}
                     fill
+                    priority={i < 3}
                     className={styles.image}
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />

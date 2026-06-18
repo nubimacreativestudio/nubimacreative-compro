@@ -30,6 +30,7 @@
   top: -200px;
   right: -100px;
   animation: float 8s ease-in-out infinite;
+  will-change: transform;
 }
 
 .orb2 {
@@ -39,6 +40,7 @@
   bottom: -100px;
   left: -100px;
   animation: float 10s ease-in-out infinite 2s;
+  will-change: transform;
 }
 
 .orb3 {
@@ -59,7 +61,7 @@
   background-size: 60px 60px;
 }
 
-/* Floating shapes */
+/* Floating shapes — hidden on mobile to reduce paint cost */
 .shapes {
   position: absolute;
   inset: 0;
@@ -352,9 +354,23 @@
   .statItem { padding: 0; border: none; }
   .statDivider { display: none; }
   .scrollIndicator { display: none; }
+
+  /* Disable GPU-heavy blur on mobile — biggest LCP win */
+  .orb { filter: none; opacity: 0.25; }
+  /* Hide decorative shapes to reduce paint layers */
+  .shapes { display: none; }
 }
 
 @media (max-width: 480px) {
   .ctas { flex-direction: column; }
   .btnPrimary, .btnSecondary { width: 100%; justify-content: center; }
+
+  /* Reduce orb sizes on small screens */
+  .orb1 { width: 300px; height: 300px; }
+  .orb2 { width: 200px; height: 200px; }
+  .orb3 { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orb1, .orb2, .orb3 { animation: none; }
 }
