@@ -1,102 +1,123 @@
 "use client";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import {
-  Globe,
-  Layout,
-  Briefcase,
-  User,
-  Smartphone,
-  Tag,
-  Box,
-  Image,
-  FileText,
-  Monitor,
-} from "lucide-react";
+import { Globe, PenTool, Bot, MessageCircle } from "lucide-react";
 import styles from "./Services.module.css";
 
-const services = [
-  {
-    icon: Layout,
-    title: "Landing Page",
-    desc: "Halaman konversi tinggi yang mengubah pengunjung menjadi pelanggan.",
-    tag: "Web",
-  },
+type ServiceItem = {
+  title: string;
+  desc: string;
+  recommended?: boolean;
+  comingSoon?: boolean;
+};
+
+type ServiceCategory = {
+  icon: React.ElementType;
+  title: string;
+  items: ServiceItem[];
+};
+
+const categories: ServiceCategory[] = [
   {
     icon: Globe,
-    title: "UMKM Website",
-    desc: "Website profesional yang memperkuat kredibilitas bisnis Anda.",
-    tag: "Web",
+    title: "Web Development",
+    items: [
+      {
+        title: "Landing Page",
+        desc: "Halaman satu fungsi yang fokus mengubah pengunjung menjadi pelanggan potensial.",
+      },
+      {
+        title: "UMKM Website",
+        desc: "Website informatif untuk memperkuat kredibilitas bisnis Anda secara online.",
+      },
+      {
+        title: "Company Profile",
+        desc: "Representasi digital bisnis dengan website profile modern dan elegan.",
+      },
+      {
+        title: "Web Portfolio",
+        desc: "Etalase karya digital Anda dengan tampilan yang memukau dan personal.",
+      },
+    ],
   },
   {
-    icon: Briefcase,
-    title: "Web Company Profile",
-    desc: "Tampilkan profesionalisme bisnis dengan website company profile modern.",
-    tag: "Web",
+    icon: PenTool,
+    title: "Branding & Identity",
+    items: [
+      {
+        title: "Logo Design",
+        desc: "Identitas visual unik yang merepresentasikan nilai dan visi misi bisnis Anda.",
+      },
+      {
+        title: "Packaging Design",
+        desc: "Desain kemasan produk yang menarik mata dan meninggalkan kesan mendalam.",
+      },
+      {
+        title: "Visual Branding Kit",
+        desc: "Panduan visual lengkap termasuk kartu nama, kop surat, dan aset brand lainnya.",
+      },
+      {
+        title: "Marketing Material",
+        desc: "Desain brosur, flyer, dan materi promosi fisik untuk kebutuhan offline.",
+      },
+      {
+        title: "Social Media Design",
+        desc: "Konten visual yang konsisten dan menarik untuk semua platform media sosial.",
+      },
+      {
+        title: "Branding Kit UMKM",
+        desc: "Identitas brand lengkap: logo, warna, tipografi, dan panduan brand.",
+      },
+      {
+        title: "Banner / Flyer",
+        desc: "Materi promosi yang eye-catching untuk setiap kampanye pemasaran.",
+      },
+      {
+        title: "Company Profile (PDF)",
+        desc: "Dokumen presentasi profesional yang mengesankan klien dan mitra.",
+      },
+      {
+        title: "UI/UX Design",
+        desc: "Antarmuka digital yang intuitif, cantik, dan berpusat pada pengguna.",
+      },
+    ],
   },
   {
-    icon: User,
-    title: "Web Portfolio",
-    desc: "Showcase karya terbaik Anda dengan tampilan yang memukau.",
-    tag: "Web",
-  },
-  {
-    icon: Smartphone,
-    title: "Social Media Design",
-    desc: "Konten visual yang konsisten dan menarik untuk semua platform.",
-    tag: "Design",
-  },
-  {
-    icon: Tag,
-    title: "Branding Kit UMKM",
-    desc: "Identitas brand lengkap: logo, warna, tipografi, dan panduan brand.",
-    tag: "Branding",
-  },
-  {
-    icon: Box,
-    title: "Packaging Design",
-    desc: "Kemasan produk yang membuat produk Anda tak tertandingi di rak.",
-    tag: "Design",
-  },
-  {
-    icon: Image,
-    title: "Banner / Flyer",
-    desc: "Materi promosi yang eye-catching untuk setiap kampanye pemasaran.",
-    tag: "Design",
-  },
-  {
-    icon: FileText,
-    title: "Company Profile (PDF)",
-    desc: "Dokumen presentasi profesional yang mengesankan klien dan mitra.",
-    tag: "Branding",
-  },
-  {
-    icon: Monitor,
-    title: "UI/UX Design",
-    desc: "Antarmuka digital yang intuitif, cantik, dan berpusat pada pengguna.",
-    tag: "Design",
+    icon: Bot,
+    title: "Automation & AI",
+    items: [
+      {
+        title: "WhatsApp Bot Setup",
+        desc: "Otomasi interaksi pelanggan Anda dengan bot WhatsApp cerdas untuk layanan 24/7 yang responsif.",
+        recommended: false,
+      },
+      {
+        title: "AI Content Gen",
+        desc: "Sistem otomatisasi pembuatan konten media sosial berbasis kecerdasan buatan.",
+        comingSoon: true,
+      },
+      {
+        title: "Workflow Automation",
+        desc: "Integrasi berbagai aplikasi bisnis Anda untuk bekerja secara otomatis dan sinkron.",
+        comingSoon: true,
+      },
+      {
+        title: "Customer Data AI",
+        desc: "Analisis perilaku pelanggan menggunakan AI untuk strategi pemasaran yang lebih akurat.",
+        comingSoon: true,
+      },
+    ],
   },
 ];
 
-const tagColors: Record<string, string> = {
-  Web: "ocean",
-  Design: "ocean",
-  Branding: "ocean",
-};
-
 export default function Services() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const isInView = useInView(ref, { once: true, amount: 0.05 });
 
   return (
     <section id="services" className={styles.services} ref={ref}>
-      {/* Background */}
-      <div className={styles.bg}>
-        <div className={styles.bgOrb1}></div>
-        <div className={styles.bgOrb2}></div>
-      </div>
-
       <div className={styles.container}>
+        {/* Heading */}
         <motion.div
           className={styles.heading}
           initial={{ opacity: 0, y: 30 }}
@@ -109,54 +130,71 @@ export default function Services() {
           </h2>
           <p className={styles.subtitle}>
             Dari branding hingga website, kami menghadirkan solusi kreatif
-            lengkap yang Anda butuhkan untuk berkembang lebih pesat.
+            lengkap yang Anda butuhkan untuk lebih pesat.
           </p>
         </motion.div>
 
-        <div className={styles.grid}>
-          {services.map((service, i) => (
-            <motion.div
-              key={service.title}
-              className={styles.card}
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.06 }}
-            >
-              <div className={styles.cardInner}>
-                <div className={styles.cardFront}>
-                  <div
-                    className={`${styles.iconWrap} ${styles[`icon-${tagColors[service.tag]}`]}`}
-                  >
-                    <service.icon size={24} />
-                  </div>
-                  <span
-                    className={`${styles.tag} ${styles[`tag-${tagColors[service.tag]}`]}`}
-                  >
-                    {service.tag}
-                  </span>
-                  <h3 className={styles.cardTitle}>{service.title}</h3>
-                  <p className={styles.cardDesc}>{service.desc}</p>
-                </div>
-                <div className={styles.cardHover}>
-                  <h3 className={styles.hoverTitle}>{service.title}</h3>
-                  <p className={styles.hoverDesc}>{service.desc}</p>
-                  <button
-                    className={styles.hoverBtn}
-                    onClick={() =>
-                      window.open(
-                        "https://wa.me/6285136877650?text=Halo%20Nubima%20Creative%2C%20saya%20tertarik%20dengan%20layanan%20" +
-                          encodeURIComponent(service.title),
-                        "_blank",
-                      )
-                    }
-                  >
-                    Pesan Sekarang →
-                  </button>
-                </div>
+        {/* Categories */}
+        {categories.map((category, ci) => (
+          <motion.div
+            key={category.title}
+            className={styles.category}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.15 + ci * 0.1 }}
+          >
+            {/* Category Header */}
+            <div className={styles.categoryHeader}>
+              <div className={styles.categoryIcon}>
+                <category.icon size={20} />
               </div>
-            </motion.div>
-          ))}
-        </div>
+              <h3 className={styles.categoryTitle}>{category.title}</h3>
+            </div>
+            <div className={styles.categoryDivider} />
+
+            {/* Cards Grid */}
+            <div className={styles.grid}>
+              {category.items.map((item, i) => (
+                <motion.div
+                  key={item.title}
+                  className={`${styles.card} ${
+                    item.recommended ? styles.cardRecommended : ""
+                  } ${item.comingSoon ? styles.cardComingSoon : ""}`}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{
+                    duration: 0.4,
+                    delay: 0.25 + ci * 0.1 + i * 0.05,
+                  }}
+                  onClick={
+                    !item.comingSoon
+                      ? () =>
+                          window.open(
+                            "https://wa.me/6285136877650?text=Halo%20Nubima%20Creative%2C%20saya%20tertarik%20dengan%20layanan%20" +
+                              encodeURIComponent(item.title),
+                            "_blank",
+                          )
+                      : undefined
+                  }
+                >
+                  {item.recommended && (
+                    <span className={styles.recommendedBadge}>RECOMMENDED</span>
+                  )}
+                  {item.recommended && (
+                    <div className={styles.recommendedIcon}>
+                      <MessageCircle size={28} />
+                    </div>
+                  )}
+                  <h4 className={styles.cardTitle}>{item.title}</h4>
+                  <p className={styles.cardDesc}>{item.desc}</p>
+                  {item.comingSoon && (
+                    <span className={styles.comingSoonBadge}>Coming Soon</span>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
 
         {/* CTA */}
         <motion.div
