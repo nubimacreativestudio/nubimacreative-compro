@@ -132,13 +132,6 @@ export default function Portfolio() {
                         ))}
                       </div>
                       <h3 className={styles.cardTitle}>{project.title}</h3>
-                      <button
-                        className={styles.viewBtn}
-                        id={`portfolio-view-${project.id}`}
-                      >
-                        <ExternalLink size={16} />
-                        Lihat Proyek
-                      </button>
                     </div>
                   </div>
                 </div>
